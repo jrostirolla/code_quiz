@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coding Quiz</title>
+        <link rel="normaliser" href="normalise.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="highscoreButton">Highscore</a>
+            <h1 class="timer">0</h1>
+        </header>
+        <main>
+            <section class="card welcome-screen">
+                <h2 id="welcome">Welcome!</h2>
+                <p>
+                    Hello there! Welcome to the ultimate programmer quiz!
+                    Here you will test your knowledge on programming terms
+                    and techniques.
+                </p>
+                <br>
+                <p>
+                    <strong>Ready to get started?</strong>
+                    Press the start button below!
+                </p>
+                <br>
+                <button id="start-button">Start</button>
+            </section>
+            <section class="card questions">
+                <h2 id="question-title">Question <span id="question-id">[ Number ]</span></h2>
+                <h3 id="question-info">[ Question-text ]</h3>
+                
+                <div class="answer">A - <span id="answer-one">[ Answer1 ]</span></div>
+                
+                <div class="answer">B - <span id="answer-two">[ Answer2 ]</span></div>
+               
+                <div class="answer">C - <span id="answer-three">[ Answer3 ]</span></div>
+                
+                <div class="answer">D - <span id="answer-four">[ Answer4 ]</span></div>
+            </section>
+            <section id="response">
+                <br>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;[ Correct / Wrong ]</div>
+            </section>
+            <section class="card user-score">
+                <br>
+                <h2>All done!</h2>
+                <br>
+                <h3>Your score was: <span id="score">0</span></h3>
+                <br>
+                <label for="user-initials">Your initials: </label>
+                <input type="text" id="user-initials" name="user-initials">&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="score-submit">Submit</button>
+            </section>
+            <submit class="card high-score">
+                <h2>Highscore</h2>
+                <br>
+                <ol>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="top-user">[ user ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="top-score">[ score ]</span></li>
+                    <br>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="second-user">[ user ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="second-score">[ score ]</span></li>
+                    <br>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="third-user">[ user ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="third-score">[ score ]</span></li>
+                    <br>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="fourth-user">[ user ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="fourth-score">[ score ]</span></li>
+                    <br>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="fifth-user">[ user ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="fifth-score">[ score ]</span></li>
+                </ol>
+                <br>
+                <button id="restart">Try again?</button>
+                <button id="clear-highscore">Clear</button>
+            </submit>
+        </main>
+        <footer>
+            <!--add in something for the latest highscore? Last score from the previous user?-->
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>

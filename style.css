@@ -1,0 +1,131 @@
+:root {
+    --base-color1: #FFE548;
+    --base-color2: #FFB20F;
+    --base-color3: #FF4B3E;
+    --base-color4: #972D07;
+    --base-color5: #582707;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: var(--base-color1);
+}
+
+button {
+    background-color: var(--base-color5);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    background-color: var(--base-color5);
+    margin: 0px;
+    padding: 5px;
+}
+
+body {
+    background-color: var(--base-color4);
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.card {
+    position: absolute;
+    left: 40%;
+    right:40%;
+    top: 30%;
+    width: 300px;
+    height: 250px;
+    background-color: var(--base-color5);
+    padding: 20px;
+    margin: 20px;
+    border: solid black 5px;
+}
+
+/* First card displayed */
+.welcome-screen {
+    display: none;
+}
+
+/* Second card displayed */
+.questions {
+    display: none;
+}
+
+.answer {
+    background-color: var(--base-color4);
+    padding: 5px 5px 5px 20px;
+    border: solid black 5px;
+    margin: 10px 0px 5px 0px;
+}
+#response {
+    display: none;
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    color: var(--base-color1);
+}  
+
+/* Third card displayed */
+.user-score {
+    display: none;
+    text-align: center;
+}
+
+#user-initials {
+    color: black;
+    width: 70px;
+    text-align: center;
+}
+
+/* Fourth card displayed */
+.high-score {
+    display: block;
+    text-align: center;
+    list-style: inside;
+}
+
+#restart {
+    position: relative;
+    right: 50px;
+    width: 90px;
+    background-color: var(--base-color4);
+}
+
+#clear-highscore {
+    position: relative;
+    left: 50px;
+    width: 90px;
+    background-color: var(--base-color4);
+}
+
+
+.highscoreButton {
+    color: var(--base-color1);
+    background-color: var(--base-color4);
+    text-align: left;
+    top: 10px;
+    left: 40px;
+    padding: 15px;
+    margin: 5px;
+    font-size: 30px;
+    border: solid black 2px;
+}
+
+.timer {
+    position: absolute;
+    right: 40px;
+    top: 22px;
+    color: var(--base-color1);
+    background-color: var(--base-color4);
+    padding: 2px 10px 2px 10px;
+    border: solid black 2px;
+    font-size: 30px;
+}
