@@ -1,9 +1,10 @@
 :root {
-    --base-color1: #FFE548;
-    --base-color2: #FFB20F;
-    --base-color3: #FF4B3E;
-    --base-color4: #972D07;
-    --base-color5: #582707;
+    /* Colour Pallete */
+    --base-color1: #EFD9CE;
+    --base-color2: #EFBC9B;
+    --base-color3: #7FC29B;
+    --base-color4: #817E9F;
+    --base-color5: #65524D;
 }
 
 * {
@@ -56,7 +57,8 @@ h2 {
     display: block;
 }
 #start-button {
-    background-color: var(--base-color4);
+    background-color: var(--base-color3);
+    color: var(--base-color5);
 }
 
 
@@ -66,11 +68,15 @@ h2 {
     height: 370px
 }
 .answer {
-    background-color: var(--base-color4);
+    background-color: var(--base-color3);
+    color: var(--base-color5);
     padding: 5px 5px 5px 20px;
     border: solid black 5px;
     margin: 10px 0px 5px 0px;
     border-radius: 20px;
+}
+.answer-tabs{
+    color: var(--base-color5);
 }
 #question-title {
     text-align: center;
@@ -82,7 +88,10 @@ h2 {
     left: 40%;
     color: var(--base-color1);
 }  
-
+#submit-answer {
+    background-color: var(--base-color3);
+    color: var(--base-color5);
+}
 
 /* Third card displayed */
 .user-score {
@@ -95,7 +104,7 @@ h2 {
     text-align: center;
 }
 #score-submit {
-    background-color: var(--base-color4);
+    background-color: var(--base-color3);
 }
 
 /* Fourth card displayed */
@@ -109,20 +118,22 @@ h2 {
     right: 50px;
     bottom: 5px;
     width: 90px;
-    background-color: var(--base-color4);
+    background-color: var(--base-color3);
+    color: var(--base-color5);
 }
 #clear-highscore {
     position: relative;
     left: 50px;
     bottom: 5px;
     width: 90px;
-    background-color: var(--base-color4);
+    background-color: var(--base-color3);
+    color: var(--base-color5);
 }
 
 
 .highscoreButton {
-    color: var(--base-color1);
-    background-color: var(--base-color4);
+    color: var(--base-color5);
+    background-color: var(--base-color3);
     text-align: left;
     top: 10px;
     left: 40px;
@@ -136,8 +147,8 @@ h2 {
     position: absolute;
     right: 40px;
     top: 22px;
-    color: var(--base-color1);
-    background-color: var(--base-color4);
+    color: var(--base-color5);
+    background-color: var(--base-color3);
     padding: 2px 10px 2px 10px;
     border: solid black 2px;
     font-size: 30px;

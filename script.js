@@ -70,42 +70,37 @@ let questTen = {
 }*/
 
 let questions2 = [
-    {text: 'sample1', 
-    answers: [{
-        correct: 'test'},{
-        wrong1: 'test'},{
-        wrong2: 'test3'},{
-        wrong3: 'test4'
-    }
-    ]},{text: 'sample2', 
-    answers: [{
-        wrong2: 'test'},{
-        wrong1: 'test'},{
-        correct: 'test3'},{
-        wrong3: 'test4'
-    }
-    ]},{text: 'sample3', 
-    answers: [{
-        wrong1: 'test'},{
-        correct: 'test'},{
-        wrong2: 'test3'},{
-        wrong3: 'test4'
-    }
-    ]},{text: 'sample4', 
-    answers: [{
-        correct: 'test'},{
-        wrong1: 'test'},{
-        wrong2: 'test3'},{
-        wrong3: 'test4'
-    }
-    ]},{text: 'sample5', 
-    answers: [{
-        wrong3: 'test'},{
-        wrong1: 'test'},{
-        wrong2: 'test3'},{
-        correct: 'test4'
-    }
-    ]},]
+    {
+        text: 'What does API mean?', 
+        wrong1: "Apps Protection Info",
+        correct: 'Application Programming Interface',
+        wrong2: 'Angry Persons Iguana',
+        wrong3: 'Agile Perspex Iris'
+    },{
+        text: 'What is Moment.JS', 
+        wrong1: "a new piece of software",
+        wrong2: 'a pausing function',
+        correct: 'a prebuilt JS program',
+        wrong3: 'a screenshot program'
+    },{
+        text: 'Which of the following is a type of coding software:', 
+        correct: "Python",
+        wrong1: 'Ninja',
+        wrong2: 'Monkey',
+        wrong3: 'Pineapple'
+    },{
+        text: 'What is the name of the JS widget depository?', 
+        wrong1: "The Widget store",
+        wrong3: 'W3 Schools',
+        wrong2: 'Widgets-R-Us',
+        correct: 'jQuery UI'
+    },{
+        text: 'Which of the following are essential for building websites:', 
+        wrong1: "HTML",
+        wrong2: 'CSS',
+        wrong3: 'Python',
+        correct: 'Both A and B'
+    },]
 
 //let questions = [questOne, questTwo, questThree, questFour, questFive, questSix, questSeven, questEight, questNine, questTen]
 
@@ -115,7 +110,6 @@ let timerCount = 60;
 let userscore;
 let userInitials;
 let timeCounter = document.getElementById("timer");
-console.log(questions2[currentQuestion].answers[0])
 
 let answerSubmit = document.getElementById("submit-answer")
 
@@ -164,19 +158,34 @@ let answerTwo = document.getElementById("answer-two");
 let answerThree = document.getElementById("answer-three");
 let answerFour = document.getElementById("answer-four");
     
-    answerOne.innerHTML = questions2[currentQuestion].answers[0];
-    answerTwo.innerHTML = questions2[currentQuestion].answers[1];
-    answerThree.innerHTML = questions2[currentQuestion].answers[2];
-    answerFour.innerHTML = questions2[currentQuestion].answers[3];
+    answerOne.textContent = questions2[currentQuestion].wrong1;
+    answerTwo.textContent = questions2[currentQuestion].correct;
+    answerThree.textContent = questions2[currentQuestion].wrong2;
+    answerFour.textContent = questions2[currentQuestion].wrong3;
+};
 
-    
-//if (aFour === true) {
-    //function nextQuestion()
-    //} else if (/* selected = wrong1 2 or 3 */) {
-    //timercount = timercount - 5;
-    //function nextQuestion();
-//}
+
+function nextQuestion() {
+if (aTwo === true) {
+    userscore++;
+    currentQuestion++;
+
+    answerOne.textContent = questions2[currentQuestion].wrong1;
+    answerTwo.textContent = questions2[currentQuestion].wrong3;
+    answerThree.textContent = questions2[currentQuestion].wrong2;
+    answerFour.textContent = questions2[currentQuestion].correct;
+
+    } else {
+    timercount = timercount - 5;
+    currentQuestion++;
+
+    answerOne.textContent = questions2[currentQuestion].wrong1;
+    answerTwo.textContent = questions2[currentQuestion].wrong3;
+    answerThree.textContent = questions2[currentQuestion].wrong2;
+    answerFour.textContent = questions2[currentQuestion].correct;
+    }
 }
+
 
 function startTimer() {
  // Sets timer
@@ -184,11 +193,6 @@ function startTimer() {
     timerCount--;
     timeCounter.innerHTML = timerCount;
 }, 1000);
-}
-
-function nextQuestion() {
-    //TODO: make a function that refills the contents
-    //of the answers
 }
 
 //TODO: Select one checkbox at a time: copied from http://jsfiddle.net/6Mkde/
@@ -208,6 +212,20 @@ for(x = 0; x < allRadios.length; x++){
         };
 
 }
+
+function restart() {
+    welcomeDisplay.style.display = "none";
+    questionDisplay.style.display = "block";
+    userscoreDisplay.style.display = "none";
+    highscoreDisplay.style.display = "none";
+
+    startQuiz();
+}
+
+
+
+
+
 
 /*
 TODO: For general:
