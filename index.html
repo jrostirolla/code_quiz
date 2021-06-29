@@ -11,12 +11,13 @@
 
     <body>
         <header>
-            <a href="#" class="highscoreButton">Highscore</a>
-            <h1 class="timer">0</h1>
+            <a href="#" onclick="highScoreSwitcher();" class="highscoreButton">Highscore</a>
+            <h1 id="timer">60</h1>
         </header>
         <main>
             <section class="card welcome-screen">
                 <h2 id="welcome">Welcome!</h2>
+                <br>
                 <p>
                     Hello there! Welcome to the ultimate programmer quiz!
                     Here you will test your knowledge on programming terms
@@ -28,19 +29,22 @@
                     Press the start button below!
                 </p>
                 <br>
-                <button id="start-button">Start</button>
+                <button id="start-button" onclick="startQuiz();">Start</button>
             </section>
             <section class="card questions">
                 <h2 id="question-title">Question <span id="question-id">[ Number ]</span></h2>
+                <br>
                 <h3 id="question-info">[ Question-text ]</h3>
                 
-                <div class="answer">A - <span id="answer-one">[ Answer1 ]</span></div>
+                <div class="answer" ><input id="a-one" type="radio" name="answer" class="answer">&nbsp;&nbsp;&nbsp;&nbsp;A - <span id="answer-one">[ Answer1 ]</span></input></div>
                 
-                <div class="answer">B - <span id="answer-two">[ Answer2 ]</span></div>
+                <div class="answer" ><input id="a-two" type="radio" name="answer" class="answer">&nbsp;&nbsp;&nbsp;&nbsp;B - <span id="answer-two">[ Answer2 ]</span></input></div>
                
-                <div class="answer">C - <span id="answer-three">[ Answer3 ]</span></div>
+                <div class="answer" ><input id="a-three" type="radio" name="answer" class="answer">&nbsp;&nbsp;&nbsp;&nbsp;C - <span id="answer-three">[ Answer3 ]</span></input></div>
                 
-                <div class="answer">D - <span id="answer-four">[ Answer4 ]</span></div>
+                <div class="answer" ><input type="radio" class="answer" name="answer" id="a-four">&nbsp;&nbsp;&nbsp;&nbsp;D - <span id="answer-four">[ Answer4 ]</span></input></div>
+                <br>
+                <button id="submit-answer">Submit</button>
             </section>
             <section id="response">
                 <br>
@@ -79,5 +83,6 @@
             <!--add in something for the latest highscore? Last score from the previous user?-->
         </footer>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </html>
