@@ -14,4 +14,4 @@ Press the start button and see how you do! Once you've answered a question, pres
 * After running into the stopping point of the quiz not working, I proceeded to work on the basic functions of the site, such as the timer, the highscore button, and starting the initial question
 
 ### Weblink
-To access my active website, please use the following link: 
+To access my active website, please use the following link: https://jrostirolla.github.io/code_quiz/
